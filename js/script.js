@@ -12,7 +12,7 @@
 
 // 1. CHIEDERE ALL'UTENTE IL NUMERO DI KM DA PERCORRERE
 
-let kmViaggio = parseInt(prompt("Quanti KM vuole percorrere?")) ;
+let kmViaggio = parseInt(prompt("Quanti Kilometri vuole percorrere?")) ;
 
 if(isNaN(kmViaggio)){
     alert("Inserisci un numero valido")
@@ -20,9 +20,9 @@ if(isNaN(kmViaggio)){
 
 // 2. CHIEDERE L'ETA' DEL PASSEGGERO
 
-const età = parseInt(prompt("Quanti anni ha il passeggero?")) ;
+const anni = parseInt(prompt("Quanti anni ha il passeggero?")) ;
 
-if(isNaN(età)){
+if(isNaN(anni)){
     alert("Inserisci un numero valido")
 }
 
@@ -42,10 +42,10 @@ let sconto = 0;
 console.log(sconto);
 
 
-if (età < 18) {
+if (anni < 18) {
     sconto = prezzoViaggio * 0.2;
     
-}else if (età > 65) {
+}else if (anni > 65) {
         sconto = prezzoViaggio * 0.4;
 
 } else {
@@ -58,6 +58,6 @@ console.log(prezzoFinale);
  
 // 6.STAMPARE IL PREZZO FINITO CON MASSIMO DUE DECIMALI
 
-const outputStr = `Ecco il prezzo del biglietto ${prezzoFinale.toFixed(2)} €`;
+const outputStr = `Ecco il prezzo del biglietto <br> ${prezzoFinale.toFixed(2)} €`;
 
 document.getElementById("output").innerHTML = outputStr;
